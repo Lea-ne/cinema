@@ -11,5 +11,3 @@ export const fetchMovies = async () => {
   }
   
 };
-
-console.log(process.env.REACT_APP_TMDB_KEY);
