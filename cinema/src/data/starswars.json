@@ -1,0 +1,18 @@
+{
+    "movies": [
+      { "title": "Star Wars, épisode IV : Un nouvel espoir", "year": 1977, "realisateur": "George Lucas" },
+
+      { "title": "Star Wars, épisode V : L'Empire contre-attaque", "year": 1980, "realisateur": "Irvin Kershner" },
+      
+      { "title": "Star Wars, épisode VI : Le Retour du Jedi", "year": 1983 , "realisateur": "Richard Marquand" },
+
+      { "title": "Star Wars, épisode I : La Menace fantôme", "year": 1999, "realisateur": "George Lucas" },
+
+      { "title": "Star Wars: Episode IV - A New Hope", "year": 1977, "realisateur": "George Lucas" },
+
+      { "title": "Star Wars, épisode II : L'Attaque des clones", "year": 2005, "realisateur": "George Lucas" },
+
+      { "title": "Star Wars, épisode III : La Revanche des Sith", "year": 2005, "realisateur": "George Lucas" }
+      
+    ]
+  }
