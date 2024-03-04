@@ -1,0 +1,16 @@
+/* movieCard.css */
+
+/* Style de la carte */
+  
+  /* Style de l'image */
+  .card img {
+    max-width: 100%; /* La largeur maximale de l'image est égale à la largeur de son conteneur (.card) */
+    height: auto; /* La hauteur est ajustée automatiquement pour conserver les proportions */
+  }
+  
+  /* Style du texte (ajustez selon vos besoins) */
+  .card p {
+    margin: 4px 0 0; /* Ajoute un espace au-dessus du texte */
+    font-size: clamp(10px, 1.5vw, 14px); /* Ajustez la taille de la police selon vos préférences */
+  }
+  

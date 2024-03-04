@@ -1,5 +1,6 @@
 // MovieCard.js
 import React from "react";
+import './movieCard.css';
 
 export default function MovieCard(props){
     const handleClick = () => {
@@ -8,8 +9,9 @@ export default function MovieCard(props){
     };
 
     return (
-        <div onClick={handleClick}>
-            <h1>Nom du film : {props.movie.title}</h1>
+        <div className="card" onClick={handleClick}>
+            <img src={`https://image.tmdb.org/t/p/w500/${props.movie.poster_path}`} alt={props.movie.title} />
+            <p>{props.movie.title}</p>
         </div>
     );
 }

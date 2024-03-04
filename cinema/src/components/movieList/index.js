@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import MovieCard from "../movieCard";
 import MovieDetail from "../movieDetail";
 import { fetchMovies } from "../../data/connexionApi";
+import './movieList.css';
 
 export default function MovieList(props){
   const [movies, setMovies] = useState([]);
@@ -22,13 +23,11 @@ export default function MovieList(props){
   };
 
   return (
-    <div>
-      {selectedMovie ? (
-        <MovieDetail movie={selectedMovie} />
-      ) : (
+    <div className="movie-grid">
+      {selectedMovie ? (<MovieDetail movie={selectedMovie} />) : (
         <div>
           {movies.map((movie, index) => (
-            <MovieCard key={index} movie={movie} onMovieClick={handleMovieClick} />
+            <MovieCard className="movieCard" key={index} movie={movie} onMovieClick={handleMovieClick} />
           ))}
         </div>
       )}
