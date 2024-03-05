@@ -1,9 +1,10 @@
 // MovieList.js
 import React, { useState, useEffect } from "react";
 import MovieCard from "../movieCard";
-import MovieDetail from "../movieDetail";
+import MovieDetail from "../../pages/filmDetails";
 import { fetchTrendyMovie, fetchComingSoon, fetchGoodGradeMovies } from "../../data/connexionApi";
 import './movieList.css';
+import { Link } from 'react-router-dom';
 
 export default function MovieList(props){
   const [movies, setMovies] = useState([]);
@@ -36,12 +37,21 @@ export default function MovieList(props){
     setSelectedMovie(movie);
   };
 
+
   return (
     <div className="movie-grid">
-      {selectedMovie ? (<MovieDetail movie={selectedMovie} />) : (
+      {selectedMovie ? (
+        <MovieDetail movie={selectedMovie} />
+      ) : (
         <div>
           {movies.map((movie, index) => (
-            <MovieCard className="movieCard" key={index} movie={movie} onMovieClick={handleMovieClick} />
+           <Link to={`/${props.categorie}/${movie.id}`} key={index}>
+            <MovieCard
+              className="movieCard"
+              movie={movie}
+              onMovieClick={handleMovieClick}
+            />
+         </Link>
           ))}
         </div>
       )}
