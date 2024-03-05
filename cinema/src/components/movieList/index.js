@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import MovieCard from "../movieCard";
 import MovieDetail from "../movieDetail";
-import { fetchMovies } from "../../data/connexionApi";
+import { fetchTrendyMovie, fetchComingSoon, fetchGoodGradeMovies } from "../../data/connexionApi";
 import './movieList.css';
 
 export default function MovieList(props){
@@ -11,12 +11,26 @@ export default function MovieList(props){
 
   useEffect(() => {
     const fetchMoviesData = async () => {
-      const moviesData = await fetchMovies();
+      let moviesData;
+
+      if (props.categorie === 'discover') {
+        moviesData = await fetchTrendyMovie();
+      } 
+      
+      if (props.categorie === 'coming-soon') {
+        moviesData = await fetchComingSoon();
+      }
+
+      else if (props.categorie === 'goodGrade') {
+        moviesData = await fetchGoodGradeMovies();
+      }
+
+
       setMovies(moviesData || []); // Utiliser un tableau vide si moviesData est undefined
     };
   
     fetchMoviesData();
-  }, []);
+  }, [props.categorie]);
 
   const handleMovieClick = (movie) => {
     setSelectedMovie(movie);
@@ -34,3 +48,4 @@ export default function MovieList(props){
     </div>
   );
 }
+
