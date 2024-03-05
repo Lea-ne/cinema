@@ -46,12 +46,12 @@ export default function MovieList(props){
         <div>
           {movies.map((movie, index) => (
            <Link to={`/${props.categorie}/${movie.id}`} key={index}>
-            <MovieCard
-              className="movieCard"
-              movie={movie}
-              onMovieClick={handleMovieClick}
-            />
-         </Link>
+              <MovieCard
+                className="movieCard"
+                movie={movie}
+                onMovieClick={handleMovieClick}
+              />
+          </Link>
           ))}
         </div>
       )}
