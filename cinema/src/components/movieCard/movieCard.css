@@ -6,6 +6,7 @@
   .card img {
     max-width: 100%; /* La largeur maximale de l'image est égale à la largeur de son conteneur (.card) */
     height: auto; /* La hauteur est ajustée automatiquement pour conserver les proportions */
+    border-radius: 6px;
   }
   
   /* Style du texte (ajustez selon vos besoins) */

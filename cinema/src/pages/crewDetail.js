@@ -8,6 +8,8 @@ export default function CrewDetail(props) {
   const [personDetails, setPersonDetails] = useState(null);
   const [movieCredits, setMovieCredits] = useState(null);
 
+ console.log(movieCredits);
+
   const calculateAge = (birthdate) => {
     const today = new Date();
     const birthDate = new Date(birthdate);
@@ -21,6 +23,8 @@ export default function CrewDetail(props) {
 
     return age;
   };
+
+
 
   useEffect(() => {
     if (personId) {
@@ -50,12 +54,15 @@ export default function CrewDetail(props) {
           <p>Biographie: {personDetails.biography}</p>
           <p>Métier : {personDetails.known_for_department}</p>
           <p>Age : {calculateAge(personDetails.birthday)} years old ({personDetails.birthday})</p>
+
+          
           {personDetails.profile_path && (
             <img
               src={`https://image.tmdb.org/t/p/w500/${personDetails.profile_path}`}
               alt={personDetails.name}
             />
           )}
+
 
           {personDetails.known_for_department === 'Directing' ? (
             <div>
