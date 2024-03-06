@@ -1,2 +1,5 @@
-- Landing page
-- Page autre que home page + créer header commun a toute les pages aaaah
+idee cool :
+
+- chat dans le site
+- a l'inscription demander la ville = avoir tout les profil des gens qui sont dans les environs (option d'etre publique pour les gens qui veulent pas)
+- on peut parler aux gens
