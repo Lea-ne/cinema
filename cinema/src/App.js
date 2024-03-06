@@ -4,8 +4,8 @@ import HomePage from './pages/homePage';
 import Header from './components/header';
 import ComingSoon from './pages/comingSoon';
 import MovieDetail from "./pages/filmDetails";
-import Realisateur from "./pages/realisateur";
-import Actor from "./pages/actor";
+import CrewDetail from "./pages/crewDetail";
+
 
 function App() {
   return (
@@ -17,8 +17,8 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="coming-soon" element={<ComingSoon />} />
         <Route path=":categorie/:id" element={<MovieDetail />} />
-        <Route path="realisateur/:name" element={<Realisateur />} />
-        <Route path="actor/:name" element={<Actor />} />
+        <Route path="/crew-detail/:personId" element={<CrewDetail />} />
+
       </Routes>
     </BrowserRouter>
 
