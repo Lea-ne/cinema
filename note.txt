@@ -1,2 +1,4 @@
 - Landing page
 - Page autre que home page + créer header commun a toute les pages
+
+- ajouter les films dans lequel un acteur a jouer
